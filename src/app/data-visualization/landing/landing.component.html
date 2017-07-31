@@ -1,3 +1,11 @@
 <p>
     landing for visualization works!
 </p>
+
+<div *ngIf="chartsData; else loadingMessage">
+    <chart *ngFor="let chart of chartsData" [options]="chart"></chart>
+</div>
+
+<ng-template #loadingMessage>
+    The Chart Data is Loading ...
+</ng-template>

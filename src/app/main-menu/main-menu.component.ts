@@ -9,69 +9,69 @@ export class MainMenuComponent implements OnInit {
 
   options: any
   constructor() {
-  
-   }
+
+  }
 
   ngOnInit() {
     this.options = {
-    chart: {
+      chart: {
         type: 'bar',
         polar: true
-    },
-    title: {
+      },
+      title: {
         text: 'Stacked column chart'
-    },
-    xAxis: {
+      },
+      xAxis: {
         categories: ['Apples', 'Oranges', 'Pears', 'Grapes', 'Bananas']
-    },
-    yAxis: {
+      },
+      yAxis: {
         min: 0,
         title: {
-            text: 'Total fruit consumption'
+          text: 'Total fruit consumption'
         },
         stackLabels: {
-            enabled: true,
-            style: {
-                fontWeight: 'bold',
-                color: 'gray'
-            }
+          enabled: true,
+          style: {
+            fontWeight: 'bold',
+            color: 'gray'
+          }
         }
-    },
-    legend: {
+      },
+      legend: {
         align: 'right',
         x: -30,
         verticalAlign: 'top',
         y: 25,
         floating: true,
-        backgroundColor:  'white',
+        backgroundColor: 'white',
         borderColor: '#CCC',
         borderWidth: 1,
         shadow: false
-    },
-    tooltip: {
+      },
+      tooltip: {
         headerFormat: '<b>{point.x}</b><br/>',
         pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
-    },
-    plotOptions: {
+      },
+      plotOptions: {
         column: {
-            stacking: 'normal',
-            dataLabels: {
-                enabled: true,
-                color:  'white'
-            }
+          stacking: 'normal',
+          dataLabels: {
+            enabled: true,
+            color: 'white'
+          }
         }
-    },
-    series: [{
+      },
+      series: [{
         name: 'John',
         data: [5, 3, 4, 7, 2]
-    }, {
+      }, {
         name: 'Jane',
         data: [2, 2, 3, 2, 1]
-    }, {
+      }, {
         name: 'Joe',
         data: [3, 4, 4, 2, 5]
-    }]
-}
+      }]
+    }
   }
 
 }
