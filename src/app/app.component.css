@@ -1,7 +1,9 @@
 .container {
     width: 100%;
     height: 100%;
-    padding: 10px;
+    padding: 0px;
+    background-image: url("../assets/img/bg.jpg");
+    flex-wrap: nowrap;
 }
 
 .col-flex {
@@ -23,25 +25,73 @@
 }
 
 .header {
-    flex-basis: 16%;
+    flex-basis: 18%;
     flex-grow: 1;
     flex-shrink: 1;
     width: 100%;
-    max-height: 16%;
+    max-height: 18%;
+    overflow: hidden;
+    background-color: transparent;
+    align-items: center;
+    color: white;
+}
+
+.header-title {
+    text-decoration: none;
+    color: rgba(230, 230, 230, 1);
+    text-align: center;
+}
+
+.logo-img:hover {
+    cursor: pointer
+}
+
+.nav-bar {
+    width: 100%;
+    justify-content: space-around;
+    background-color: rgba(255, 255, 255, .8);
+    color: lightslategray;
+}
+
+.route-btn:hover {
+    cursor: pointer;
+    background-color: rgba(110, 110, 110, 1);
+    color: white;
+}
+
+.active {
+    background-color: rgba(110, 110, 110, 1);
+    color: white;
 }
 
 .body {
-    flex-basis: 74%;
+    flex-basis: 76%;
     flex-grow: 2;
     flex-shrink: 2;
-    width: 100%;
-    max-height: 74%;
+    width: 99%;
+    margin: 0% .5%;
+    max-height: 76%;
+    overflow: auto;
+    padding: 10px;
+    background-color: rgba(110, 110, 110, .8);
 }
 
 .footer {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    align-items: center;
     flex-basis: 10%;
     flex-grow: 1;
     flex-shrink: 1;
     width: 100%;
-    max-height: 10%;
+    max-height: 5.5%;
+    margin-top: .3%;
+    overflow: hidden;
+    text-align: center;
+    vertical-align: middle;
+    background-color: rgba(255, 255, 255, .8);
+    font-size: 14px;
+    font-family: 700;
 }

@@ -1,17 +1,27 @@
-<div class="container col-flex">
-    <div class="header">
-        <h2>Header will be added here</h2>
-        <nav>
-            <a routerLink="" routerLinkActive="active">MainMenu</a>
-            <a routerLink="Solutions" routerLinkActive="active">ES6 Solutions</a>
-            <a routerLink="DataVisualization" routerLinkActive="active">Data Visualization</a>
-            <a routerLink="Controls" routerLinkActive="active">Controls</a>
-        </nav>
+<div class="col-flex container">
+    <div class="col-flex header">
+        <div class="header-icon">
+            <img src="favicon.ico" class="logo-img" (click)="RouteTo($event,'')">
+        </div>
+        <div class=header-info>
+            <h2 (click)="RouteTo($event,'')">Ng General Ideas</h2>
+        </div>
+        <div class="row-flex nav-bar">
+            <div class="route-btn" [ngClass]="{active: activeModule === 'Solutions'}" (click)="RouteTo($event,'Solutions')"> ES6 Solutions</div>
+            <div class="route-btn" [ngClass]="{active: activeModule === 'DataVisualization'}" (click)="RouteTo($event,'DataVisualization')"> Data Visualization</div>
+            <div class="route-btn" [ngClass]="{active: activeModule === 'Controls'}" (click)="RouteTo($event,'Controls')"> Controls</div>
+            <!-- <nav>
+                <a routerLink="Solutions" routerLinkActive="active">ES6 Solutions</a>
+                <a routerLink="DataVisualization" routerLinkActive="active">Data Visualization</a>
+                <a routerLink="Controls" routerLinkActive="active">Controls</a>
+            </nav> -->
+
+        </div>
     </div>
     <div class="body">
         <router-outlet></router-outlet>
     </div>
     <div class="footer">
-        <h6> footer will be added here </h6>
+        <span class="footer-info"> Copyright &copy; 2017 Ng General Ideas </span>
     </div>
 </div>
